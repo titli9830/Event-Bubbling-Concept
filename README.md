@@ -10,7 +10,7 @@
 
 ### Notes:
 
-This project is a simple example of Event Bubbling concept used inside Calculator.It is made using Java Script,HTML,CSS. This project will show how to implement Event Bubbling in your code using event-listener 
+It's a simple & responsive Calculator created using Event Bubbling concept.Java Script, HTML, CSS is used to create it. This project will show how to implement Event Bubbling for nested elements using event-listener.
 
 ### Output
 
