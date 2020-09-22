@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(69 74 132), rgb(102 64 121));;
+        }
+
+        .container {
+            margin: auto;
+            height: max-content;
+            width: max-content;
+
+            /*To fix the position always in the center of screen while screenchange*/
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /*#####END--->To fix the position always in the center of screen while screenchange#####*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .main1,
+        .main2,
+        .main3,
+        .main4 {
+            justify-content: center;
+            display: flex;
+
+        }
+
+        .main1 span,
+        .main2 span,
+        .main3 span,
+        .main4 span {
+            padding: 10px;
+            border: 2px solid #d0b0b0;
+            width: 50;
+            height: 50;
+            font-size: 25;
+            margin: 2;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.6s;
+
+            font-weight: 300;
+            font-family: sans-serif;
+            
+            /*To place text in the middle of div/span*/
+            text-align: center;
+            vertical-align: middle;
+            line-height: 50px
+
+        }
+
+        .main1 span:hover,
+        .main2 span:hover,
+        .main3 span:hover,
+        .main4 span:hover {
+            background-color: darkgray;
+            /* font-size: xx-large; */
+        }
+
+        .calpad {
+            /* border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+            border-image-slice: 1; */
+
+            justify-content: center;
+            display: flex;
+            width: 308px;
+            height: 55px;
+            margin: 5px;
+            font-size: 25;
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            background: border-box;
+            border: 2px solid #d0b0b0;
+            border-radius: 8px;
+            transition: 0.6s;
+        }
+
+        .calpad:hover {
+            background-color: darkgray;
+        }
+
+        .calpad:focus {
+            outline: none;
+        }
+
+        /*To disappear default scrollbar in Input box of Number type*/
+        /* input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        } */
+
+         @media  (max-width: 375px) {
+             .container{
+                 width: 80%;
+             }
+            .calpad{
+                width: 100%;
+            } 
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="function.js"></script>
+    <div class="container">
+        <!-- Used onkeypress="return /[0-9,+,-,/,*,=,C]/i.test(event.key)" here to restrict text type input box from typing alphabets -->
+        <input class="calpad" type="text" name="ans" id="ans" onkeypress="return /[0-9,+,-,/,*]/i.test(event.key)" />
+        <div class="main1" onclick="func1(event)">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>+</span>
+        </div>
+        <div class="main2" onclick="func1(event)">
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>-</span>
+        </div>
+        <div class="main3" onclick="func1(event)">
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>*</span>
+        </div>
+        <div class="main4" onclick="func1(event)">
+            <span>C</span>
+            <span>0</span>
+            <span>=</span>
+            <span>/</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
